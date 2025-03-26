@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>XYZ</h2>
+      
+      <button type="submit">Add friend</button>
+    </div>
+    <script>
+        // Get the button element
+        const button = document.querySelector('button');
+        const container = document.querySelector('.container');
+        // Add event listener to the button
+        button.addEventListener("click" , function(){
+            button.innerText = "Remove Friend"
+            container.style.backgroundColor= "black"
+            container.style.color= "#ccc"
+            button.style.backgroundColor = "red"
+            alert("Friend Removed");
+        })
+
+        // Add event listener for double click 
+
+        button.addEventListener("dblclick" , function(){
+            button.innerText = "Add friend"
+            container.style.backgroundColor= "white"
+            container.style.color= "black"
+            button.style.backgroundColor = "#4CAF50"
+        })
+    </script>
+  </body>
+</html>
