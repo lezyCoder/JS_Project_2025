@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Download Song</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="progressBar">
+        <div class="growth" id="bar"></div>
+      </div>
+      <h4 class="value" id="value">0%</h4>
+
+      <div class="more">
+        <p>Song.mp3</p>
+        <button type="submit" id="downloadBtn">Download</button>
+      </div>
+    </div>
+
+    <script>
+      let btn = document.getElementById("downloadBtn");
+      let percentageValue = document.getElementById("value");
+      let bar = document.getElementById("bar");
+      let grow = 0;
+
+      btn.addEventListener("click", function () {
+        if (grow != 100) {
+          var interval = setInterval(function () {
+            grow++;
+            bar.style.width = grow + "%";
+            percentageValue.textContent = grow + "%";
+          }, 100);
+
+          setTimeout(() => {
+            btn.textContent = "Downloaded";
+            btn.style.opacity = 0.5;
+            clearInterval(interval);
+          }, 10000);
+        }
+      });
+    </script>
+  </body>
+</html>
