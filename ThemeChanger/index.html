@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags for character set and viewport settings -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title of the page -->
+    <title>Theme Changer</title>
+    
+    <!-- Link to external stylesheet (style.css) -->
+    <link rel="stylesheet" href="style.css" />
+    
+    <!-- Link to Material Symbols Outlined Icon library for the 'menu' icon -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu"
+    />
+  </head>
+  <body>
+    <!-- Main container that holds the whole page -->
+    <div class="main-container">
+      <!-- Container for displaying messages or changes -->
+      <div class="container">
+        <p>Changes Will Appear Here</p> <!-- Placeholder message -->
+      </div>
+      
+      <!-- Theme container where themes and options will be controlled -->
+      <div class="theme-container">
+        <!-- Themes section with a button to toggle visibility of theme options -->
+        <div class="themes">
+          <!-- Button to toggle theme options visibility -->
+          <button type="submit">Themes</button>
+
+          <!-- Hidden container to hold buttons for selecting color or image themes -->
+          <div class="hiddenContainer">
+            <!-- Container for color and image selection buttons -->
+            <div class="btns">
+              <!-- Button for selecting color themes -->
+              <button type="submit" id="colors">Colors</button>
+              <!-- Button for selecting image themes -->
+              <button type="submit" id="images">Images</button>
+            </div>
+
+            <!-- Container for color selection boxes -->
+            <div class="colorContainer">
+              <!-- Color boxes, each represents a different color to choose from -->
+              <div class="1"></div>
+              <div class="2"></div>
+              <div class="3"></div>
+              <div class="4"></div>
+              <div class="5"></div>
+              <div class="6"></div>
+              <div class="7"></div>
+              <div class="8"></div>
+              <div class="9"></div>
+            </div>
+
+            <!-- Container for image selection boxes -->
+            <div class="imagesContainer">
+              <!-- Image boxes, each represents a different background image to choose from -->
+              <div class="1"></div>
+              <div class="2"></div>
+              <div class="3"></div>
+              <div class="4"></div>
+              <div class="5"></div>
+              <div class="6"></div>
+              <div class="7"></div>
+              <div class="8"></div>
+              <div class="9"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Link to external JavaScript file (script.js) -->
+    <script src="script.js"></script>
+  </body>
+</html>

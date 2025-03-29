@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  width: 70vw;
+  /* border: 1px solid green ; */
+  height: 100%;
+  color: beige;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  letter-spacing: 0.7rem;
+}
+.theme-container{
+    height: 100%;
+     /* border: 1px solid red;  */
+}
+.themes {
+  height: 100%;
+  width: 30vw;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  flex-direction: column;
+  padding: 0.1rem;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  /* width: 30%; */
+  border-radius: 5px;
+  /* background-color: rgb(240, 237, 79); */
+  color: black;
+}
+
+.hiddenContainer {
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  height: 100%;
+  /* border: 1px solid blue; */
+  padding: 10px;
+  width: 100%;
+}
+
+.btns{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+}
+
+
+.colorContainer , .imagesContainer{
+    margin-top: 2rem;
+    display: none;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    place-items: center;
+   /* border: 1px solid red; */
+   height: 100%;
+   width: 100%;
+   background-color: rgba(254, 255, 240, 0.861);
+   border-radius: 5px;
+}
+
+.colorContainer > div ,.imagesContainer >div {
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;  
+    text-align: center;
+    width: 100px;
+    height: 100px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
