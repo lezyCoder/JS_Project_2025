@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock_Paper_Scissor Game </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <!-- ?? Container CClass Start Here  -->
+    <div class="container">
+        <div class="score">
+            <p>Computer: 
+                <span id="computer_score">0</span>
+            </p>
+            <p>
+                You :
+                
+                <span id="user_score">0</span>
+            </p>
+        </div>
+        <div class="weapons">
+
+            <button onclick="checker ('rock')">
+                🪨
+            </button>
+            
+            <button onclick="checker('paper')">
+                📃
+            </button>
+            
+            <button onclick="checker('scissor')">
+                ✂️
+            </button>
+        </div>
+
+        <div class="details">
+            <p id="user_choice"></p>
+            <p id="comp_choice"></p>
+            <p id="result"></p>
+        </div>
+
+  </div>   <!-- ?? Container end here -->
+    
+</body>
+<script src="script.js"></script>
+</html>
