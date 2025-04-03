@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confirmation Page</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(airport.jpg);
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        height: 15rem;
+        padding: 20px;
+        background-color: aliceblue;
+        border-radius: 5px;
+      }
+      .container h1 {
+        margin-bottom: 3rem;
+      }
+
+      .container button {
+        color: #fffcfc;
+        background-color: rgb(102, 50, 188);
+        border: none;
+        padding: 10px;
+        width: 100%;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="container">
+      <h1>Thank you for your submission!</h1>
+      <p id="caseIdDisplay">Your Case ID will appear here.</p>
+
+      <button id="backbtn">Login</button>
+    </main>
+    <script>
+      // Extract the 'caseID' query parameter from the URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const caseID = urlParams.get("caseID");
+
+      // Display the case ID on the page
+      document.getElementById(
+        "caseIdDisplay"
+      ).textContent = `Your Case ID is : ${caseID}`;
+
+      // Fix the case of the 'backbtn' ID
+      const backBtn = document.getElementById("backbtn");
+
+      backBtn.addEventListener("click", function () {
+        window.location.href = "index.html";
+      });
+    </script>
+  </body>
+</html>

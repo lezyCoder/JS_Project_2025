@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a:visited {
+  color: rgb(215, 46, 46);
+}
+
+nav {
+  padding: 10px;
+  background-color: rgb(102, 50, 188);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.list-items ul {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  color: #efeaea;
+  font-size: 1rem;
+}
+
+.options {
+  padding: 8px;
+  border: none;
+  text-align: center;
+}
+
+main {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(airport.jpg);
+}
+
+.left-link {
+  display: flex;
+  align-self: flex-end;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+.box {
+  font-size: 12px;
+  padding: 5px;
+  display: none;
+  border: 1px solid black;
+  border-radius: 2px;
+  position: relative;
+  left: 9rem;
+  bottom: 9px;
+}
+
+.container {
+  width: 500px;
+  border: 1px solid rgb(126, 122, 122);
+  border-radius: 2px;
+  background-color: #fbfbfc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 50px;
+  height: 95%;
+  box-shadow: 1px 1px 10px black;
+}
+
+.container h2 {
+  font-weight: 900;
+}
+
+.login_details {
+  padding: 20px 100px 0 100px;
+  margin: 25px;
+}
+
+.labels {
+  display: flex;
+  align-self: flex-start;
+  gap: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+
+span {
+  color: rgb(218, 54, 54);
+  text-decoration: none;
+  font-size: 12px;
+}
+
+input[type="text"],
+button,
+a {
+  padding: 10px;
+  width: 100%;
+  margin: 12px;
+  border: none;
+}
+
+input[type="text"] {
+  border: 1px solid black;
+  outline: none;
+}
+
+button {
+  color: #fffcfc;
+  background-color: rgb(102, 50, 188);
+  border: none;
+}
+.right-link {
+  font-size: 18px;
+  color: rgb(250, 14, 14);
+  font-style: italic;
+  /* background-color: black; */
+}
+
+button footer a {
+  color: rgb(102, 50, 188);
+  text-decoration: none;
+}
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #efeaea;
+  font-size: 16px;
+}
