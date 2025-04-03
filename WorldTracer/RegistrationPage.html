@@ -1,0 +1,232 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        padding: 20px;
+          background-image: url("airport.jpg");
+          background-repeat: no-repeat;
+          background-size: cover; /* Optional: scales the image to cover the entire element */
+          background-position: center; /* Optional: centers the image within the element */
+        }
+      
+      main {
+        max-width: 600px;
+        margin: auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        text-align: center;
+        color: #333;
+      }
+      .formContainer form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      label {
+        margin-bottom: 8px;
+        font-weight: bold;
+      }
+      .related_data {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+      }
+
+      .related_data input {
+        width: 100%;
+      }
+
+      input,
+      textarea {
+        padding: 8px;
+        margin-bottom: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+      textarea {
+        resize: vertical;
+        min-height: 80px;
+      }
+      .submit button {
+        padding: 10px 15px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-right: 10px;
+      }
+      .submit button[type="reset"] {
+        background-color: #f44336;
+      }
+      .submit button:hover {
+        opacity: 0.9;
+      }
+      @media screen and (max-width: 550px) {
+        .related_data {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0;
+          border: 1px solid red;
+        }
+        .related_data label {
+          margin-right: 15rem;
+        }
+        .submit {
+          display: flex;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <h2>Registration Form</h2>
+      <div class="formContainer">
+        <form action="" method="post" id="formData">
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" name="full-name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="mobile">Mobile No.</label>
+          <input
+            type="tel"
+            id="mobile"
+            name="mobile"
+            pattern="[0-9]{10}"
+            placeholder="Enter 10-digit number"
+            required
+          />
+
+          <label for="reservation-number">Reservation Number</label>
+          <input
+            type="text"
+            id="reservation-number"
+            name="reservation-number"
+            required
+            max="6"
+          />
+
+          <label for="ticket-number">Ticket Number</label>
+          <input
+            type="text"
+            id="ticket-number"
+            name="ticket-number"
+            maxlength="16"
+            required
+          />
+
+          <label for="bag-tag-number">Bag Tag Number</label>
+          <input
+            type="text"
+            id="bag-tag-number"
+            name="bag-tag-number"
+            required
+          />
+
+          <div class="related_data">
+            <label for="flightDate">Flight Date </label>
+            <input type="date" id="flightDate" name="flight-date" required />
+
+            <label for="flightNumber">Flight Number </label>
+            <input type="text" id="flightNumber" name="flightNumber" required />
+        
+            <label for="arrivalAirportt">Arrival Airport </label>
+            <input
+              type="text"
+              id="arrivalAirport"
+              name="arrivalAirport"
+              required
+              max="3"
+              placeholder="Airport Code"
+            />
+          </div>
+          <label for="baggageDescription">Baggage Description</label>
+          <textarea
+            id="baggageDescription"
+            name="baggageDescription"
+          ></textarea>
+
+          <div class="submit">
+            <button type="submit">Generate Report</button>
+            <button type="reset" id="resetBtn">Reset</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
+
+<script>
+  const forms = document.getElementById("formData");
+  const resetBtn = document.getElementById("resetBtn");
+
+  function onRegistrationSubmit(event) {
+    event.preventDefault(); // Prevent the form from submitting
+
+    // Log individual input field values( Learn the FormData object )
+    const formData = new FormData(event.target);
+
+    // for (let entries of formData) {
+    //  entries of formData is array
+    //   // Capitalize the field name (entries[0]) and log it with its value (entries[1])
+    //   console.log(entries[0].toUpperCase() + "->" + entries[1]);
+    // }
+
+    // Generate a random 5-digit number (between 10000 and 99999)
+    let number = Math.floor(Math.random() * 90000) + 10000;
+
+    //  Getting the airport code
+    let airportCode = formData.get("arrivalAirport");
+
+    // Getting the airline code
+    let flightNumber = formData.get("flightNumber");
+
+    let airlineCode = flightNumber.slice(0, 2).toUpperCase(); // as first 2 character of flightNumber is airline code
+
+    const referenceNumber = airportCode + airlineCode + number;
+
+    // // Log the generated case ID
+    console.log(`Your case ID is: ${referenceNumber}`);
+
+    // Redirect to the confirmation page with the case ID as a query parameter
+    setTimeout(function reDirect() {
+      // Call the reset function if it exists
+      if (typeof onResetForm === "function") {
+        onResetForm(event);
+      } else {
+        console.warn("onResetForm is not defined.");
+      }
+
+      // Redirect to the confirmation page
+      window.location.href = `confirmationPage.html?caseID=${referenceNumber}`;
+    }, 5000);
+  }
+
+  function onResetForm(event) {
+    event.preventDefault();
+    event.target.reset();
+    console.log("Form Data reset ");
+  }
+
+  // Add the submit event listener to the form
+
+  forms.addEventListener("submit", onRegistrationSubmit);
+  // Reset the form
+  resetBtn.addEventListener("reset", onResetForm);
+</script>
