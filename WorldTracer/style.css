@@ -18,6 +18,7 @@ nav {
   align-items: center;
   justify-content: space-evenly;
 }
+
 .list-items ul {
   display: flex;
   gap: 20px;
@@ -116,6 +117,7 @@ button {
   background-color: rgb(102, 50, 188);
   border: none;
 }
+
 .right-link {
   font-size: 18px;
   color: rgb(250, 14, 14);
@@ -127,9 +129,14 @@ button footer a {
   color: rgb(102, 50, 188);
   text-decoration: none;
 }
+
 footer {
   text-align: center;
   padding: 10px;
+  height: 10vh;
   background-color: #efeaea;
   font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
