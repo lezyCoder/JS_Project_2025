@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://images.unsplash.com/photo-1741017778557-31eaf775ce0a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    position: relative
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 20%;
+}
+
+form {
+    width: 100vw;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    position: fixed;
+    bottom: 10%;
+}
+
+input {
+    padding: 10px;
+    width: 200px;
+    border: 1px dotted #000;
+    border-radius: 5px;
+    outline: none;
+}
+
+#addTask {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+
+#taskList {
+    margin-top: 10px;
+    width: 30%;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+li {
+    list-style-type: none;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid rgb(158, 90, 193);
+    gap: 10px;
+}
+
+.deleteBtn {
+    padding: 8px;
+    background-color: #dc6235;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}

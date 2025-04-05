@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>To Do List</h1>
+    <form id="taskForm">
+      <input type="text" id="taskInput" placeholder="Enter your task" />
+      <button type="submit" id="addTask">Add Task</button>
+    </form>
+    <ul id="taskList">
+      <!-- Task list will be dynamically added here -->
+      <li>
+        Gym at 5
+        <button class="deleteBtn" id="deleteBtn">Delete</button>
+      </li>
+    </ul>
+
+    <script src="script.js"></script>
+  </body>
+</html>
