@@ -1,0 +1,140 @@
+<!--  Dont look this until you learn about the session / token and databases. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTP Verification</title>
+    <style>
+      /* Reset default browser styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Body and page styling */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f7fc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        padding: 20px;
+      }
+
+      /* Container for the form */
+      .container {
+        background-color: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(42, 42, 42, 0.1);
+        width: 100%;
+        max-width: 400px;
+      }
+
+      h2 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      p {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 12px;
+        color: #666;
+      }
+
+      /* Form group styling */
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        font-size: 14px;
+        color: #333;
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        outline: none;
+      }
+
+      input[type="text"]:focus {
+        border-color: #007bff;
+      }
+
+      /* Button styling */
+      .submit-btn {
+        width: 100%;
+        padding: 12px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .submit-btn:hover {
+        background-color: #0056b3;
+      }
+
+      /* Resend OTP link */
+      .form-group a {
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      .form-group a:hover {
+        text-decoration: underline;
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 14px;
+        color: #aaa;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>OTP Verification</h2>
+      <p>Please enter the OTP sent to your registered email or phone number.</p>
+
+      <form action="/verify-otp" method="POST">
+        <div class="form-group">
+          <label for="otp">Enter OTP:</label>
+          <input
+            type="text"
+            id="otp"
+            name="otp"
+            placeholder="Enter OTP"
+            required
+            maxlength="6"
+          />
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="submit-btn">Verify OTP</button>
+        </div>
+
+        <div class="form-group">
+          <p>Didn't receive the OTP? <a href="/resend-otp">Resend OTP</a></p>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
