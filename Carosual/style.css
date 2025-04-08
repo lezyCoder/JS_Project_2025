@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  height: 450px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px #000;
+  overflow: hidden;
+}
+.imagelist {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease-in-out
+}
+.imagelist li {
+  min-width: 100%; /* Har slide container ki full width lega */
+}
+.imagelist img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Image aspect ratio maintain karega */
+}
+
+button {
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+  border: none;
+  outline: none;
+  font-size: 1.3rem;
+  color: white;
+  opacity: 0.6;
+  border-radius: 5px;
+  background-color: #e8d965;
+
+  text-transform: uppercase;
+}
+.prev {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+}
+
+.next {
+  position: absolute;
+  right:0%;
+  top: 50%;
+  transform: translateY(-50%);
+}
