@@ -1,0 +1,111 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.container {
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px #62278a;
+  height: 40vh;
+  padding: 20px;
+}
+
+.inputData {
+  width: 100%;
+  display: flex;
+  gap: 50px;
+  /* border: 1px solid red; */
+}
+input {
+  padding: 10px;
+  width: 70%;
+  border-bottom: 2px solid #62278a !important;
+  outline: none;
+  border: none;
+  font-size: 1.3rem;
+}
+
+input::placeholder {
+  color: #000;
+  font-size: 1rem;
+}
+button {
+  padding: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #62278a;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  border-radius: 5px;
+  width: 100px;
+  transition: transform 0.3s ease-out;
+}
+button:hover {
+  transform: scale(0.95);
+}
+
+.description {
+  width: 100%;
+  display: flex;
+  /* border: 1px solid red; */
+  margin-top: 20px;
+}
+
+.meaning {
+  width: 70%;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #8556c7;
+  font-weight: 600;
+  /* border: 1px solid blue; */
+  padding: 5px;
+  height: 100px;
+}
+
+.others {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  height: 80px;
+  width: 100%;
+  /* border: 1px solid red; */
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 200;
+  letter-spacing: 0.1rem;
+  font-style: italic;
+  color: #8556c7;
+  text-align: center;
+}
+.synonyms,
+.antonyms {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 5px;
+  width: 50%;
+  padding: 10px;
+}
+
+.synonyms p,
+.antonyms p {
+  width: 100%;
+  font-size: 0.78rem;
+  margin-top: 5px;
+  overflow: hidden;
+  /* border: 1px solid red; */
+}
